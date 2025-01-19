@@ -1,0 +1,74 @@
+/* Page Background */
+.page-background {
+  background-color: #ffffff; 
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Card Background - Glass Effect */
+.card-background {
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+  backdrop-filter: blur(10px); /* Blur the background behind the card */
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 400px;
+  width: 100%;
+  animation: slideIn 1s ease-out;
+}
+
+/* Hover effects on cards */
+.card-background:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Button styles */
+button {
+  background-color: #ff7043; /* Coral */
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background-color: #ff5722; /* Darker coral for hover effect */
+}
+
+/* Heading and Text */
+h1, h2, h3, p {
+  color: #263238; /* Dark slate text for better readability */
+  font-family: 'Arial', sans-serif;
+}
+
+/* Adding animation for the page's background fade-in */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+/* Adding slide-in animation for cards */
+@keyframes slideIn {
+  0% {
+      transform: translateY(30px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
